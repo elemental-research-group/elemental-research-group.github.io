@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --border: 40 14% 86%;
+    --radius: 0rem;
+
+    --paper:   #f8f5ee;
+    --paper-2: #efeae0;
+    --ink:     #18181b;
+    --ink-2:   #3a3a40;
+    --ink-3:   #6b6b70;
+    --rule:    #d6d0c4;
+    --accent:  #1a00cc;
+    --accent-soft: #efedff;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--paper);
+    color: var(--ink);
+    font-feature-settings: 'ss01', 'cv11';
+  }
+}
+
+/* ── Display serif ──────────────────────────────────────── */
+.font-display {
+  font-family: 'Fraunces', 'Iowan Old Style', 'Apple Garamond', 'Baskerville', Georgia, serif;
+  font-feature-settings: 'ss01' on;
+  letter-spacing: -0.02em;
+}
+.font-mono {
+  font-family: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+/* ── Scroll-reveal ──────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible        { opacity: 1; transform: translateY(0); }
+.reveal-left           { opacity: 0; transform: translateX(-18px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+.reveal-left.visible   { opacity: 1; transform: translateX(0); }
+.reveal-scale          { opacity: 0; transform: scale(0.985); transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1); }
+.reveal-scale.visible  { opacity: 1; transform: scale(1); }
+
+.delay-100 { transition-delay: 80ms !important; }
+.delay-200 { transition-delay: 160ms !important; }
+.delay-300 { transition-delay: 240ms !important; }
+.delay-400 { transition-delay: 320ms !important; }
+
+/* ── Scrollbar ──────────────────────────────────────────── */
+::-webkit-scrollbar            { width: 6px; }
+::-webkit-scrollbar-track      { background: var(--paper); }
+::-webkit-scrollbar-thumb      { background: var(--rule); }
+::-webkit-scrollbar-thumb:hover{ background: var(--accent); }
+
+/* ── Small caps label ───────────────────────────────────── */
+.sc-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ink-3);
+}
+
+/* ── Numbered note (e.g. ⁰¹) ────────────────────────────── */
+.num-note {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--accent);
+  vertical-align: super;
+}
+
+/* ── Marquee ────────────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+}
+.marquee-track:hover { animation-play-state: paused; }
+
+/* ── Paper grain texture ────────────────────────────────── */
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+}
+
+/* ── Editorial link ─────────────────────────────────────── */
+.ed-link {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.3s ease;
+}
+.ed-link:hover { background-size: 100% 1px; }
+
+/* ── Drop cap ───────────────────────────────────────────── */
+.drop-cap::first-letter {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  float: left;
+  font-size: 4.2rem;
+  line-height: 0.85;
+  padding: 0.4rem 0.6rem 0 0;
+  color: var(--accent);
+}
+
+/* ── Topographic contour lines ──────────────────────────── */
+.bg-contour {
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400' preserveAspectRatio='none'><g fill='none' stroke='%231a00cc' stroke-width='0.6' opacity='0.07'><path d='M0,60 C150,30 300,90 450,40 S600,80 600,60'/><path d='M0,100 C150,70 300,130 450,80 S600,120 600,100'/><path d='M0,140 C150,110 300,170 450,120 S600,160 600,140'/><path d='M0,180 C150,150 300,210 450,160 S600,200 600,180'/><path d='M0,220 C150,190 300,250 450,200 S600,240 600,220'/><path d='M0,260 C150,230 300,290 450,240 S600,280 600,260'/><path d='M0,300 C150,270 300,330 450,280 S600,320 600,300'/><path d='M0,340 C150,310 300,370 450,320 S600,360 600,340'/></g></svg>");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ── Schematic blueprint grid ───────────────────────────── */
+.bg-blueprint {
+  background-image:
+    linear-gradient(rgba(26,0,204,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,0,204,0.06) 1px, transparent 1px),
+    linear-gradient(rgba(26,0,204,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,0,204,0.025) 1px, transparent 1px);
+  background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
+}
+
+/* ── Crosshair/tick pattern ─────────────────────────────── */
+.bg-crosshairs {
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'><g stroke='%231a00cc' stroke-width='0.6' opacity='0.16'><path d='M40 34 L40 46'/><path d='M34 40 L46 40'/></g></svg>");
+  background-size: 80px 80px;
+}
+
+/* ── Concentric arcs (radar) ────────────────────────────── */
+.bg-radar {
+  background-image:
+    radial-gradient(circle at 100% 50%, transparent 60px, rgba(26,0,204,0.06) 61px, transparent 62px),
+    radial-gradient(circle at 100% 50%, transparent 130px, rgba(26,0,204,0.05) 131px, transparent 132px),
+    radial-gradient(circle at 100% 50%, transparent 210px, rgba(26,0,204,0.04) 211px, transparent 212px),
+    radial-gradient(circle at 100% 50%, transparent 300px, rgba(26,0,204,0.03) 301px, transparent 302px);
+}
+
+/* ── Halftone dot fade ──────────────────────────────────── */
+.bg-halftone {
+  background-image:
+    radial-gradient(circle, rgba(26,0,204,0.10) 1px, transparent 1.5px);
+  background-size: 16px 16px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+          mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+}
+
+/* ── Corner brackets ────────────────────────────────────── */
+.corner-brackets {
+  position: relative;
+}
+.corner-brackets::before,
+.corner-brackets::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--accent);
+}
+.corner-brackets::before {
+  top: 0; left: 0;
+  border-top: 1.5px solid;
+  border-left: 1.5px solid;
+}
+.corner-brackets::after {
+  bottom: 0; right: 0;
+  border-bottom: 1.5px solid;
+  border-right: 1.5px solid;
+}
