@@ -1,0 +1,18 @@
+/* TEAM */
+Lead: Bhavith Chandra
+Site: https://Bhavith-Chandra.github.io
+Contact: bc4066 [at] nyu.edu
+
+/* THANKS */
+Open-source community
+
+/* SITE */
+Last update: 2026
+Standards: HTML5, CSS3, JS
+Components: React, TypeScript, Vite, Tailwind
+Source: https://github.com/elemental-research-group/elemental-research-group.github.io
+
+/* DISCLAIMER */
+Elemental Research Lab is an independent open-source research
+project. It is not affiliated with, endorsed by, or sponsored
+by any university or institution.
