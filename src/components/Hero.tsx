@@ -123,18 +123,19 @@ export default function Hero() {
             </div>
 
             <div className="border-t border-[#d6d0c4] pt-4">
-              <div className="sc-label text-[#1a00cc] mb-2">By the numbers</div>
+              <div className="sc-label text-[#1a00cc] mb-2">At a glance</div>
               <ul className="space-y-0">
                 {[
-                  { to: 15, suffix: "+", label: "Researchers" },
-                  { to: 10, suffix: "+", label: "Affiliations" },
-                  { to: 3,  suffix: "",  label: "Active projects" },
+                  { label: "Team size",         value: "Small (1)" },
+                  { label: "Active project",    value: "1" },
+                  { label: "Established",       value: "2025" },
+                  { label: "License",           value: "MIT · Open source" },
                 ].map((s, i) => (
                   <li key={s.label}
-                    className={`flex items-baseline justify-between gap-4 py-2 ${i < 2 ? "border-b border-[#d6d0c4]" : ""}`}>
+                    className={`flex items-baseline justify-between gap-4 py-2 ${i < 3 ? "border-b border-[#d6d0c4]" : ""}`}>
                     <span className="text-[#6b6b70] text-[12px]">{s.label}</span>
-                    <span className="font-display text-[19px] font-medium text-[#18181b] leading-none">
-                      <Counter to={s.to} suffix={s.suffix} delay={i * 100} />
+                    <span className="font-display text-[15px] font-medium text-[#18181b] leading-none">
+                      {s.value}
                     </span>
                   </li>
                 ))}

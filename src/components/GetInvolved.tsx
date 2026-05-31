@@ -106,10 +106,10 @@ export default function GetInvolved() {
             <div className="sc-label text-[#1a00cc] mb-5">Status</div>
             <ul className="space-y-0">
               {[
-                { label: "Researchers",      value: "15+" },
-                { label: "Affiliations",     value: "10+" },
-                { label: "Active projects",  value: "3"   },
-                { label: "License",          value: "MIT" },
+                { label: "Team size",      value: "Small (1)" },
+                { label: "Active project", value: "1"         },
+                { label: "Established",    value: "2025"      },
+                { label: "License",        value: "MIT"       },
               ].map((s, i) => (
                 <li key={s.label}
                   className={`flex items-baseline justify-between gap-4 py-2.5 ${i < 3 ? "border-b border-[#d6d0c4]" : ""}`}>
