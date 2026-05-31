@@ -1,0 +1,4 @@
+Contact: https://github.com/elemental-research-group/elemental-research-group.github.io/issues
+Preferred-Languages: en
+Canonical: https://elemental-research-group.github.io/.well-known/security.txt
+Expires: 2027-01-01T00:00:00Z

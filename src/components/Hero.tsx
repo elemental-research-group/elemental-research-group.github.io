@@ -39,7 +39,7 @@ export default function Hero() {
           <div className="flex items-center gap-5 text-[11px] text-[#8a8580]">
             <span className="font-mono uppercase tracking-[0.2em] text-[#1a00cc]">Elemental Research Lab</span>
             <span className="text-[#d6d0c4] hidden md:inline">·</span>
-            <span className="hidden md:inline font-mono uppercase tracking-[0.2em]">Non-Profit · New York</span>
+            <span className="hidden md:inline font-mono uppercase tracking-[0.2em]">Independent · Open-Source</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[#1a00cc] animate-pulse" />
@@ -63,7 +63,7 @@ export default function Hero() {
 
             <p className="font-display text-[clamp(1.05rem,1.4vw,1.3rem)] leading-[1.5] text-[#3a3a40] font-light mt-6 max-w-[58ch]"
               style={{ animation: "fadeUp 0.8s 0.25s ease both", opacity: 0, animationFillMode: "forwards" }}>
-              Elemental Research Lab is a non-profit group building open-source tools that make neural networks auditable. We work on interpretability, model diagnostics, and safety evaluation.
+              Elemental Research Lab is an independent open-source project on GitHub Pages, exploring tools that help make neural networks more interpretable. Work-in-progress.
             </p>
 
             <div className="flex flex-wrap items-center gap-3 mt-7"
@@ -123,18 +123,19 @@ export default function Hero() {
             </div>
 
             <div className="border-t border-[#d6d0c4] pt-4">
-              <div className="sc-label text-[#1a00cc] mb-2">By the numbers</div>
+              <div className="sc-label text-[#1a00cc] mb-2">At a glance</div>
               <ul className="space-y-0">
                 {[
-                  { to: 15, suffix: "+", label: "Researchers" },
-                  { to: 10, suffix: "+", label: "Affiliations" },
-                  { to: 3,  suffix: "",  label: "Active projects" },
+                  { label: "Team size",         value: "Small (1)" },
+                  { label: "Active project",    value: "1" },
+                  { label: "Established",       value: "2025" },
+                  { label: "License",           value: "MIT · Open source" },
                 ].map((s, i) => (
                   <li key={s.label}
-                    className={`flex items-baseline justify-between gap-4 py-2 ${i < 2 ? "border-b border-[#d6d0c4]" : ""}`}>
+                    className={`flex items-baseline justify-between gap-4 py-2 ${i < 3 ? "border-b border-[#d6d0c4]" : ""}`}>
                     <span className="text-[#6b6b70] text-[12px]">{s.label}</span>
-                    <span className="font-display text-[19px] font-medium text-[#18181b] leading-none">
-                      <Counter to={s.to} suffix={s.suffix} delay={i * 100} />
+                    <span className="font-display text-[15px] font-medium text-[#18181b] leading-none">
+                      {s.value}
                     </span>
                   </li>
                 ))}

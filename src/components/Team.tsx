@@ -13,36 +13,21 @@ function useRevealSection(ref: React.RefObject<HTMLElement>) {
   }, []);
 }
 
-const contributors = [
-  { abbr: "NYU",      name: "New York University",        color: "#57068c",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/NYU_logo.svg/240px-NYU_logo.svg.png" },
-  { abbr: "Stanford", name: "Stanford University",         color: "#8C1515",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Stanford_University_seal_2003.svg/240px-Stanford_University_seal_2003.svg.png" },
-  { abbr: "Harvard",  name: "Harvard University",          color: "#A51C30",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Harvard_University_coat_of_arms.svg/240px-Harvard_University_coat_of_arms.svg.png" },
-  { abbr: "UCB",      name: "UC Berkeley",                 color: "#003262",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/240px-Seal_of_University_of_California%2C_Berkeley.svg.png" },
-  { abbr: "ICL",      name: "Imperial College London",     color: "#003e74",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/Imperial_College_London_crest.svg/200px-Imperial_College_London_crest.svg.png" },
-  { abbr: "NUS",      name: "National Univ. of Singapore", color: "#003d7c",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/26/National_University_of_Singapore_coat_of_arms.svg/240px-National_University_of_Singapore_coat_of_arms.svg.png" },
-  { abbr: "UoB",      name: "Univ. of Birmingham",         color: "#06215e",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/University_of_Birmingham_coat_of_arms.svg/240px-University_of_Birmingham_coat_of_arms.svg.png" },
-  { abbr: "IITH",     name: "IIT Hyderabad",               color: "#1a3c6e",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/IIT_Hyderabad_Logo.svg/200px-IIT_Hyderabad_Logo.svg.png" },
-  { abbr: "VJTI",     name: "VJTI Mumbai",                 color: "#1a3c6e",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Vjti_logo.png/200px-Vjti_logo.png" },
-  { abbr: "HRT",      name: "Hudson River Trading",        color: "#0a0a14",
-    logo: "https://logo.clearbit.com/hudsonrivertrading.com" },
+// Generic backgrounds list — no third-party logo URLs, no external resource loads.
+// Phrased as personal histories of contributors, not affiliations of the project.
+const backgrounds = [
+  "Universities in the United States",
+  "Universities in the United Kingdom",
+  "Universities in India",
+  "Universities in Singapore",
+  "Independent open-source contributors",
 ];
-
-const marqueeItems = [...contributors, ...contributors];
 
 const team = [
   {
     name:  "Bhavith Chandra",
-    role:  "Lead · AI Safety Research Engineer",
-    bio:   "Leads core research initiatives at Elemental. Focused on mechanistic interpretability and building open-source tooling for safe AI.",
+    role:  "Maintainer",
+    bio:   "Maintains the project. Interested in mechanistic interpretability and small open-source tooling for understanding neural networks.",
     href:  "https://Bhavith-Chandra.github.io",
     initial: "B",
   },
@@ -52,6 +37,11 @@ const team = [
     bio:   "Core contributor and researcher at Elemental. Focused on developing safe, environment agnostic world models and embodied AI",
     href:  "https://paramthakkar123.github.io/",
     initial: "P",
+    name:  "Sanskar Pandey",
+    role:  "Research Contributor & Engineer",
+    bio:   "AI/ML research engineering and core contributor at Elemental. Works on interpretability, world models, continual learning, and alignment-aware architectures. Interests span AI safety, geometric ML, and paths toward AGI.",
+    href:  "https://skar07.github.io",
+    initial: "S",
   },
 ];
 
@@ -144,52 +134,29 @@ export default function Team() {
           </p>
         </div>
 
-        {/* Contributors marquee */}
+        {/* Backgrounds — generic, no specific institution names, no logos */}
         <div className="reveal">
-          <div className="flex items-baseline gap-5 mb-5">
-            <div className="sc-label text-[#1a00cc]">Contributors from</div>
+          <div className="flex items-baseline gap-5 mb-4">
+            <div className="sc-label text-[#1a00cc]">Contributor backgrounds</div>
             <div className="flex-1 h-px bg-[#d6d0c4]" />
-            <div className="text-[11px] text-[#8a8580] font-mono uppercase tracking-[0.18em]">{contributors.length} institutions</div>
           </div>
 
-          <div className="relative overflow-hidden bg-white border border-[#d6d0c4] py-6"
-            style={{ maskImage: "linear-gradient(to right, transparent, black 6%, black 94%, transparent)" }}>
-            <div className="marquee-track">
-              {marqueeItems.map((inst, i) => (
-                <div key={i}
-                  className="mx-7 flex items-center gap-3.5 group flex-shrink-0"
-                  title={inst.name}>
-                  <div className="w-11 h-11 flex items-center justify-center flex-shrink-0 relative">
-                    <img
-                      src={inst.logo}
-                      alt={inst.name}
-                      className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300"
-                      onError={(e) => {
-                        const t = e.currentTarget;
-                        t.style.display = "none";
-                        const sib = t.nextElementSibling as HTMLElement | null;
-                        if (sib) sib.style.display = "flex";
-                      }}
-                    />
-                    <div
-                      className="w-11 h-11 items-center justify-center font-display text-white text-[13px] font-semibold absolute inset-0 hidden"
-                      style={{ backgroundColor: inst.color }}
-                    >
-                      {inst.abbr.slice(0, 3)}
-                    </div>
-                  </div>
-                  <div className="leading-tight">
-                    <div className="font-display text-[14px] text-[#18181b] font-medium whitespace-nowrap">{inst.abbr}</div>
-                    <div className="text-[10px] text-[#8a8580] whitespace-nowrap">{inst.name}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <p className="text-[#8a8580] text-[11px] italic font-display mt-3">
-            A non-exhaustive list of institutions our researchers, collaborators and advisors come from.
+          <p className="text-[#6b6b70] text-[14px] leading-[1.65] mb-4 max-w-[68ch]">
+            Contributors come from a mix of personal academic and open-source backgrounds. The list below is intentionally generic; this project does not claim institutional affiliation.
           </p>
+
+          <ul className="flex flex-wrap gap-x-3 gap-y-2 mb-4">
+            {backgrounds.map(b => (
+              <li key={b}
+                className="text-[#3a3a40] text-[13px] px-3 py-1 border border-[#d6d0c4] bg-white">
+                {b}
+              </li>
+            ))}
+          </ul>
+
+          <div className="border-t border-[#d6d0c4] pt-3 text-[#8a8580] text-[11px] leading-[1.6] italic font-display">
+            <strong className="not-italic font-semibold text-[#3a3a40]">Independent project.</strong> This is an independent open-source project on GitHub Pages. It does not represent any university, company, or institution.
+          </div>
         </div>
 
       </div>
