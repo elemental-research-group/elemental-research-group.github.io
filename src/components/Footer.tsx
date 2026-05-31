@@ -19,7 +19,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-white/60 text-[14px] leading-[1.7] max-w-[36ch] mb-6">
-              A non-profit research group advancing AI safety through mechanistic interpretability. All artifacts open-source.
+              An independent open-source project on GitHub Pages exploring mechanistic interpretability tools.
             </p>
             <div className="flex items-center gap-2 text-[11px] tracking-[0.18em] uppercase text-[#9a8fff] font-mono">
               <span className="w-1.5 h-1.5 rounded-full bg-[#9a8fff] animate-pulse" />
@@ -55,8 +55,9 @@ export default function Footer() {
             <div className="sc-label text-white/50 mb-5">Connect</div>
             <ul className="space-y-3 text-[14px]">
               <li>
-                <a href="mailto:bc4066@nyu.edu" className="text-white/80 hover:text-[#9a8fff] transition-colors ed-link">
-                  Email
+                <a href="https://github.com/Bhavith-Chandra" target="_blank" rel="noopener noreferrer"
+                  className="text-white/80 hover:text-[#9a8fff] transition-colors ed-link">
+                  Maintainer
                 </a>
               </li>
               <li>
@@ -74,13 +75,27 @@ export default function Footer() {
           Elemental<em className="italic text-[#1a00cc]/30">Research</em>
         </div>
 
+        {/* Disclaimer */}
+        <div className="mt-10 pt-6 border-t border-white/10 text-white/40 text-[12px] leading-[1.6] max-w-3xl">
+          <strong className="text-white/60 font-semibold">About this site.</strong>{" "}
+          Elemental Research Lab is a small, independent open-source research project.
+          It is not affiliated with, endorsed by, or sponsored by any university,
+          company, or government body. Institutional names that appear on this page
+          refer only to the personal educational or professional backgrounds of
+          individual contributors. Source code:{" "}
+          <a href="https://github.com/elemental-research-group/elemental-research-group.github.io"
+            className="text-white/70 hover:text-white underline">
+            github.com/elemental-research-group
+          </a>.
+        </div>
+
         {/* Bottom legal */}
-        <div className="mt-14 pt-7 border-t border-white/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div className="text-white/40 text-[12px] font-mono">
             © {year} Elemental Research Lab · New York, NY
           </div>
           <div className="text-white/30 text-[11px] tracking-[0.2em] uppercase font-mono">
-            All research outputs open-source
+            Open source · MIT
           </div>
         </div>
       </div>
