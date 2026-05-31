@@ -48,7 +48,7 @@ const team = [
   },
   {
     name:  "Param Thakkar",
-    role:  "Member · AI Safety Research",
+    role:  "Member · AI Safety and World Models Research",
     bio:   "Core contributor and researcher at Elemental. Focused on developing safe, environment agnostic world models and embodied AI",
     href:  "https://paramthakkar123.github.io/",
     initial: "P",
