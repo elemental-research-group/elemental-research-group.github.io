@@ -46,6 +46,13 @@ const team = [
     href:  "https://Bhavith-Chandra.github.io",
     initial: "B",
   },
+  {
+    name:  "Skar",
+    role:  "Research Engineer · AI/ML Systems",
+    bio:   "AI/ML research engineering and core contributor at Elemental. Works on interpretability, world models, continual learning, and alignment-aware architectures. Interests span AI safety, geometric ML, and paths toward AGI.",
+    href:  "https://skar07.github.io",
+    initial: "S",
+  },
 ];
 
 export default function Team() {
