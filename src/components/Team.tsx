@@ -32,6 +32,11 @@ const team = [
     initial: "B",
   },
   {
+    name:  "Param Thakkar",
+    role:  "Member · AI Safety and World Models Research",
+    bio:   "Core contributor and researcher at Elemental. Focused on developing safe, environment agnostic world models and embodied AI",
+    href:  "https://paramthakkar123.github.io/",
+    initial: "P",
     name:  "Sanskar Pandey",
     role:  "Research Contributor & Engineer",
     bio:   "AI/ML research engineering and core contributor at Elemental. Works on interpretability, world models, continual learning, and alignment-aware architectures. Interests span AI safety, geometric ML, and paths toward AGI.",
