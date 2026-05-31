@@ -19,7 +19,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-white/60 text-[14px] leading-[1.7] max-w-[36ch] mb-6">
-              A non-profit research group advancing AI safety through mechanistic interpretability. All artifacts open-source.
+              An independent open-source project on GitHub Pages exploring mechanistic interpretability tools.
             </p>
             <div className="flex items-center gap-2 text-[11px] tracking-[0.18em] uppercase text-[#9a8fff] font-mono">
               <span className="w-1.5 h-1.5 rounded-full bg-[#9a8fff] animate-pulse" />
@@ -55,8 +55,9 @@ export default function Footer() {
             <div className="sc-label text-white/50 mb-5">Connect</div>
             <ul className="space-y-3 text-[14px]">
               <li>
-                <a href="mailto:bc4066@nyu.edu" className="text-white/80 hover:text-[#9a8fff] transition-colors ed-link">
-                  Email
+                <a href="https://github.com/Bhavith-Chandra" target="_blank" rel="noopener noreferrer"
+                  className="text-white/80 hover:text-[#9a8fff] transition-colors ed-link">
+                  Maintainer
                 </a>
               </li>
               <li>

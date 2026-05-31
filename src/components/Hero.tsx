@@ -39,7 +39,7 @@ export default function Hero() {
           <div className="flex items-center gap-5 text-[11px] text-[#8a8580]">
             <span className="font-mono uppercase tracking-[0.2em] text-[#1a00cc]">Elemental Research Lab</span>
             <span className="text-[#d6d0c4] hidden md:inline">·</span>
-            <span className="hidden md:inline font-mono uppercase tracking-[0.2em]">Non-Profit · New York</span>
+            <span className="hidden md:inline font-mono uppercase tracking-[0.2em]">Independent · Open-Source</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[#1a00cc] animate-pulse" />
@@ -63,7 +63,7 @@ export default function Hero() {
 
             <p className="font-display text-[clamp(1.05rem,1.4vw,1.3rem)] leading-[1.5] text-[#3a3a40] font-light mt-6 max-w-[58ch]"
               style={{ animation: "fadeUp 0.8s 0.25s ease both", opacity: 0, animationFillMode: "forwards" }}>
-              Elemental Research Lab is a non-profit group building open-source tools that make neural networks auditable. We work on interpretability, model diagnostics, and safety evaluation.
+              Elemental Research Lab is an independent open-source project on GitHub Pages, exploring tools that help make neural networks more interpretable. Work-in-progress.
             </p>
 
             <div className="flex flex-wrap items-center gap-3 mt-7"

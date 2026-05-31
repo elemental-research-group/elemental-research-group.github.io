@@ -39,27 +39,27 @@ export default function About() {
           {/* Main column */}
           <div className="lg:col-span-7 lg:col-start-2 reveal">
             <p className="font-display text-[22px] lg:text-[26px] leading-[1.45] text-[#18181b] font-light mb-12">
-              Elemental Research Lab is a non-profit research group based in New York, dedicated to advancing AI safety through mechanistic interpretability.
+              Elemental Research Lab is an independent open-source project exploring tools related to mechanistic interpretability of neural networks.
             </p>
 
             <div className="space-y-6 text-[#3a3a40] text-[16px] leading-[1.75] max-w-[60ch]">
               <p>
-                We bring together researchers and engineers from leading institutions worldwide to build open-source tools that reverse-engineer neural networks. The aim is simple: make them auditable so we can understand what they actually compute.
+                We work on small open-source experiments that try to reverse-engineer how neural networks build internal representations. The aim is simple: explore tools that may help make models more interpretable, and share whatever we learn.
               </p>
               <p>
-                The lab operates at the intersection of <em className="italic text-[#18181b]">interpretability tooling</em>, <em className="italic text-[#18181b]">model diagnostics</em>, and <em className="italic text-[#18181b]">safety evaluation</em>. Our work is unencumbered by commercial pressure. Every artifact we produce remains free and open to the broader AI safety community.
+                The project sits at the intersection of <em className="italic text-[#18181b]">interpretability tooling</em>, <em className="italic text-[#18181b]">model diagnostics</em>, and <em className="italic text-[#18181b]">safety evaluation</em>. Everything we publish is open-source under the MIT license; there is no commercial product behind this page.
               </p>
               <p>
-                We are not a startup. We are not a product company. We are a small group of researchers who think that understanding the systems we are building matters more than racing ahead of that understanding.
+                We are not a startup, not a registered organisation, and not affiliated with any university. We are a small group that thinks understanding the systems we are building matters more than racing ahead of that understanding.
               </p>
             </div>
 
             <div className="mt-12 pt-8 border-t border-[#d6d0c4] flex flex-wrap items-baseline gap-x-6 gap-y-2">
-              <span className="sc-label">Founded by</span>
-              <span className="font-display text-[18px] text-[#18181b] italic">Bhavith &amp; Team</span>
+              <span className="sc-label">Maintained by</span>
+              <span className="font-display text-[18px] text-[#18181b] italic">Bhavith Chandra</span>
               <span className="text-[#d6d0c4]">·</span>
-              <span className="sc-label">Based in</span>
-              <span className="font-display text-[18px] text-[#18181b] italic">New York, NY</span>
+              <span className="sc-label">Licence</span>
+              <span className="font-display text-[18px] text-[#18181b] italic">MIT (open source)</span>
             </div>
           </div>
 
@@ -71,7 +71,7 @@ export default function About() {
                 {[
                   { num: "01", title: "Interpretability Tooling", body: "Open-source frameworks that dissect what neural networks compute internally." },
                   { num: "02", title: "Model Diagnostics",       body: "Rigorous tests for whether models actually use what they appear to attend to." },
-                  { num: "03", title: "Safety Evaluation",       body: "Reproducible benchmarks for assessing the behaviour of frontier models." },
+                  { num: "03", title: "Safety Evaluation",       body: "Small experiments and reproducible notebooks for interpretability research." },
                 ].map((p, i) => (
                   <li key={p.num}
                     className={`flex gap-5 py-6 group ${i < 2 ? "border-b border-[#d6d0c4]" : ""}`}>

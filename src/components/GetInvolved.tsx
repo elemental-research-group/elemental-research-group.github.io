@@ -77,12 +77,12 @@ export default function GetInvolved() {
         {/* CTA editorial block */}
         <div className="reveal-scale border-t border-[#1a00cc] pt-6 lg:pt-8 grid lg:grid-cols-12 gap-8 lg:gap-10">
           <div className="lg:col-span-7 lg:col-start-2">
-            <div className="sc-label text-[#1a00cc] mb-5">Open · Non-Profit</div>
+            <div className="sc-label text-[#1a00cc] mb-5">Open · MIT licensed</div>
             <h3 className="font-display text-[clamp(2rem,4vw,3rem)] font-medium leading-[1.1] text-[#18181b] mb-5">
               All research outputs remain open and accessible.
             </h3>
             <p className="text-[#3a3a40] text-[16px] leading-[1.7] max-w-[58ch]">
-              Our non-profit structure ensures tools, frameworks, and findings stay freely available to the AI safety community—unencumbered by commercial pressure.
+              Our project is open-source under the MIT license; everything published here is freely available to read, fork, and adapt.
             </p>
 
             <div className="flex flex-wrap items-center gap-6 mt-7">
@@ -93,8 +93,9 @@ export default function GetInvolved() {
                 </svg>
                 View the source
               </a>
-              <a href="mailto:bc4066@nyu.edu" className="group inline-flex items-center gap-2 text-[#18181b] text-[13px] font-medium">
-                <span className="ed-link">bc4066@nyu.edu</span>
+              <a href="https://github.com/Bhavith-Chandra" target="_blank" rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 text-[#18181b] text-[13px] font-medium">
+                <span className="ed-link">Open an issue on GitHub</span>
                 <svg className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>

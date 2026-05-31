@@ -13,36 +13,21 @@ function useRevealSection(ref: React.RefObject<HTMLElement>) {
   }, []);
 }
 
-const contributors = [
-  { abbr: "NYU",      name: "New York University",        color: "#57068c",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/NYU_logo.svg/240px-NYU_logo.svg.png" },
-  { abbr: "Stanford", name: "Stanford University",         color: "#8C1515",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Stanford_University_seal_2003.svg/240px-Stanford_University_seal_2003.svg.png" },
-  { abbr: "Harvard",  name: "Harvard University",          color: "#A51C30",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Harvard_University_coat_of_arms.svg/240px-Harvard_University_coat_of_arms.svg.png" },
-  { abbr: "UCB",      name: "UC Berkeley",                 color: "#003262",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/240px-Seal_of_University_of_California%2C_Berkeley.svg.png" },
-  { abbr: "ICL",      name: "Imperial College London",     color: "#003e74",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/Imperial_College_London_crest.svg/200px-Imperial_College_London_crest.svg.png" },
-  { abbr: "NUS",      name: "National Univ. of Singapore", color: "#003d7c",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/26/National_University_of_Singapore_coat_of_arms.svg/240px-National_University_of_Singapore_coat_of_arms.svg.png" },
-  { abbr: "UoB",      name: "Univ. of Birmingham",         color: "#06215e",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/University_of_Birmingham_coat_of_arms.svg/240px-University_of_Birmingham_coat_of_arms.svg.png" },
-  { abbr: "IITH",     name: "IIT Hyderabad",               color: "#1a3c6e",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/IIT_Hyderabad_Logo.svg/200px-IIT_Hyderabad_Logo.svg.png" },
-  { abbr: "VJTI",     name: "VJTI Mumbai",                 color: "#1a3c6e",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Vjti_logo.png/200px-Vjti_logo.png" },
-  { abbr: "HRT",      name: "Hudson River Trading",        color: "#0a0a14",
-    logo: "https://logo.clearbit.com/hudsonrivertrading.com" },
+// Generic backgrounds list — no third-party logo URLs, no external resource loads.
+// Phrased as personal histories of contributors, not affiliations of the project.
+const backgrounds = [
+  "Universities in the United States",
+  "Universities in the United Kingdom",
+  "Universities in India",
+  "Universities in Singapore",
+  "Independent open-source contributors",
 ];
-
-const marqueeItems = [...contributors, ...contributors];
 
 const team = [
   {
     name:  "Bhavith Chandra",
-    role:  "Lead · AI Safety Research Engineer",
-    bio:   "Leads core research initiatives at Elemental. Focused on mechanistic interpretability and building open-source tooling for safe AI.",
+    role:  "Maintainer",
+    bio:   "Maintains the project. Interested in mechanistic interpretability and small open-source tooling for understanding neural networks.",
     href:  "https://Bhavith-Chandra.github.io",
     initial: "B",
   },
@@ -137,28 +122,28 @@ export default function Team() {
           </p>
         </div>
 
-        {/* Academic backgrounds — plain text, no logos, no affiliation claim */}
+        {/* Backgrounds — generic, no specific institution names, no logos */}
         <div className="reveal">
           <div className="flex items-baseline gap-5 mb-4">
-            <div className="sc-label text-[#1a00cc]">Personal academic backgrounds</div>
+            <div className="sc-label text-[#1a00cc]">Contributor backgrounds</div>
             <div className="flex-1 h-px bg-[#d6d0c4]" />
           </div>
 
           <p className="text-[#6b6b70] text-[14px] leading-[1.65] mb-4 max-w-[68ch]">
-            Our researchers&rsquo; personal educational and professional backgrounds include the following institutions. These are individual histories, not endorsements or affiliations.
+            Contributors come from a mix of personal academic and open-source backgrounds. The list below is intentionally generic; this project does not claim institutional affiliation.
           </p>
 
           <ul className="flex flex-wrap gap-x-3 gap-y-2 mb-4">
-            {contributors.map(inst => (
-              <li key={inst.abbr}
+            {backgrounds.map(b => (
+              <li key={b}
                 className="text-[#3a3a40] text-[13px] px-3 py-1 border border-[#d6d0c4] bg-white">
-                {inst.name}
+                {b}
               </li>
             ))}
           </ul>
 
           <div className="border-t border-[#d6d0c4] pt-3 text-[#8a8580] text-[11px] leading-[1.6] italic font-display">
-            <strong className="not-italic font-semibold text-[#3a3a40]">Disclaimer.</strong> Elemental Research Lab is an independent open-source project. It is <em>not</em> affiliated with, endorsed by, or sponsored by any of the universities listed above. Mentions reflect personal education or work history of individual contributors only.
+            <strong className="not-italic font-semibold text-[#3a3a40]">Independent project.</strong> This is an independent open-source project on GitHub Pages. It does not represent any university, company, or institution.
           </div>
         </div>
 
