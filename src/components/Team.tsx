@@ -48,7 +48,7 @@ const team = [
   },
   {
     name:  "Sanskar Pandey",
-    role:  "Research Engineer · AI Interpretability & Safety",
+    role:  "Research Contributor & Engineer",
     bio:   "AI/ML research engineering and core contributor at Elemental. Works on interpretability, world models, continual learning, and alignment-aware architectures. Interests span AI safety, geometric ML, and paths toward AGI.",
     href:  "https://skar07.github.io",
     initial: "S",
