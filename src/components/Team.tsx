@@ -52,6 +52,13 @@ const team = [
     href:  "https://skar07.github.io",
     initial: "S",
   },
+  {
+    name:  "Yugandhar Reddy",
+    role:  "Research Affiliate \u00b7 AI Interpretability & Safety",
+    bio:   "Works on world model interpretability, LLM post-training, and alignment-aware systems at Elemental. Interests span mechanistic interpretability, AI safety, and scalable paths toward robust AGI.",
+    href:  "https://yugandhargogireddy.com/",
+    initial: "Y",
+  },
 ];
 
 export default function Team() {
