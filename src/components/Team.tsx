@@ -59,6 +59,13 @@ const team = [
     href:  "https://yugandhargogireddy.com/",
     initial: "Y",
   },
+  {
+    name:  "Shiva Prabhath Kocherlakota",
+    role:  "Research Contributor & Engineer",
+    bio:   "Researching and engineering next-generation intelligence through LLMs, State Space Models, efficient architectures, and high-performance AI infrastructure for scalable learning systems",
+    href:  "https://www.linkedin.com/in/shiva-prabhath-kocherlakota-80493526b/",
+    initial: "K",
+  },
 ];
 
 export default function Team() {
