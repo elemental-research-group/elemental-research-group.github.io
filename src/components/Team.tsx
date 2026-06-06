@@ -32,6 +32,13 @@ const team = [
     initial: "B",
   },
   {
+    name:  "Yugandhar Reddy",
+    role:  "Research Affiliate \u00b7 AI Interpretability & Safety",
+    bio:   "Works on world model interpretability, LLM post-training, and alignment-aware systems at Elemental. Interests span mechanistic interpretability, AI safety, and scalable paths toward robust AGI.",
+    href:  "https://yugandhargogireddy.com/",
+    initial: "Y",
+  },
+  {
     name:  "Hindol Roy Choudhury",
     role:  "Research Contributor & Engineer ·",
     bio:   "Contributor and researcher at Elemental. Focused on developing interpretability tooling for world models",
@@ -51,13 +58,6 @@ const team = [
     bio:   "AI/ML research engineering and core contributor at Elemental. Works on interpretability, world models, continual learning, and alignment-aware architectures. Interests span AI safety, geometric ML, and paths toward AGI.",
     href:  "https://skar07.github.io",
     initial: "S",
-  },
-  {
-    name:  "Yugandhar Reddy",
-    role:  "Research Affiliate \u00b7 AI Interpretability & Safety",
-    bio:   "Works on world model interpretability, LLM post-training, and alignment-aware systems at Elemental. Interests span mechanistic interpretability, AI safety, and scalable paths toward robust AGI.",
-    href:  "https://yugandhargogireddy.com/",
-    initial: "Y",
   },
   {
     name:  "Shiva Prabhath Kocherlakota",
