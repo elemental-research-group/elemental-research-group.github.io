@@ -66,6 +66,13 @@ const team = [
     href:  "https://www.linkedin.com/in/shiva-prabhath-kocherlakota-80493526b/",
     initial: "K",
   },
+  {
+    name:  "Wenhao Lu",
+    role:  "Research Contributor & Engineer",
+    bio:   "Research contributor and engineer at Elemental, focused on world models and interpretability. Works on understanding how learned representations form and generalize, and on building tooling to probe model internals. A high school student pursuing early research in foundational AI systems, with interests spanning AI safety and scalable architectures.",
+    href:  "https://www.wenhao-lu.com/",
+    initial: "W",
+  },
 ];
 
 export default function Team() {
