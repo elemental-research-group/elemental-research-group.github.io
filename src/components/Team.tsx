@@ -73,6 +73,14 @@ const team = [
     href:  "https://www.wenhao-lu.com/",
     initial: "W",
   },
+    {
+    name:  "Mohamed Deraz Nasr ",
+    role:  "Research Contributor & Engineer",
+    bio:   "Master's student at Georgia Tech working on world models, mechanistic interpretability, and embodied AI, with interests in representation learning, AI safety, and scalable machine learning systems.",
+    href:  "https://www.mderaznasr.org/",
+    initial: "M",
+  },
+  
 ];
 
 export default function Team() {
