@@ -308,6 +308,19 @@
       html[data-theme="dark"] .tile.dark .tl { color: var(--muted); }
       html[data-theme="dark"] .proj .pv .code { background: #16161a; color: var(--ink); }
       html[data-theme="dark"] .frame { box-shadow: 0 40px 80px -50px rgba(0,0,0,.8); }
+
+      /* ===== cinematic cover (Earth video) ===== */
+      .hero.cover { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 120px var(--gut) 60px; overflow: hidden;
+        background: radial-gradient(58% 62% at 76% 46%, #e7ebff 0%, rgba(244,242,234,0) 66%), radial-gradient(50% 55% at 10% 98%, #fce6dd 0%, rgba(244,242,234,0) 70%), var(--paper); }
+      html[data-theme="dark"] .hero.cover { background: radial-gradient(58% 62% at 76% 46%, #16224e 0%, rgba(5,6,12,0) 66%), radial-gradient(52% 52% at 12% 96%, #191453 0%, rgba(5,6,12,0) 70%), #05060c; }
+      .hero.cover .wrap { position: relative; }
+      .hero.cover h1 .rot { color: var(--blue); }
+      html[data-theme="dark"] .hero.cover h1 .rot { color: #8fa6ff; }
+      .earthwrap { position: relative; aspect-ratio: 1/1; width: 100%; max-width: 700px; margin-left: auto; display: flex; align-items: center; justify-content: center; overflow: visible; }
+      .earthwrap video, .earthwrap img { width: 162%; height: 162%; object-fit: contain; transform: translateX(8%);
+        -webkit-mask-image: radial-gradient(circle farthest-side at 50% 50%, #000 52%, rgba(0,0,0,0) 59%);
+        mask-image: radial-gradient(circle farthest-side at 50% 50%, #000 52%, rgba(0,0,0,0) 59%); }
+      @media (max-width: 900px){ .hero.cover .wrap { grid-template-columns: 1fr; } .earthwrap { max-width: 440px; margin: 20px auto 0; } .earthwrap video, .earthwrap img { width: 140%; height: 140%; transform: none; } }
     </style>
   </head>
   <body>
@@ -328,7 +341,7 @@
       </a>
       <div class="hgroup">
         <nav class="nav">
-          <a href="#lab" data-h>Lab</a>
+          <a href="research.html" data-h>Research</a>
           <a href="#work" data-h>Work</a>
           <a href="#people" data-h>People</a>
           <a href="#mission" data-h>Mission</a>
@@ -339,15 +352,15 @@
     </header>
 
     <main>
-      <!-- HERO -->
-      <section class="hero" id="hero">
+      <!-- HERO / COVER -->
+      <section class="hero cover" id="hero">
         <div class="wrap">
           <div>
             <h1 class="rv d1">Inside the<br /><span class="rot" id="rot">world model</span>.</h1>
             <p class="sub rv d2">Elemental is an independent open-source lab for <b>world model interpretability</b>. We reverse-engineer how predictive models like Meta's I-JEPA build internal representations of the world, and release everything in the open.</p>
             <div class="cta-row rv d3">
-              <a href="#work" class="btn" data-h><span>Explore the research</span><span>→</span></a>
-              <a href="#lab" class="btn ghost" data-h><span>See the lab live</span></a>
+              <a href="research.html" class="btn" data-h><span>Explore the research</span><span>→</span></a>
+              <a href="#work" class="btn ghost" data-h><span>See our work</span></a>
             </div>
             <div class="hero-stats rv d4">
               <div class="s"><div class="v" data-count="8">0</div><div class="k">Contributors</div></div>
@@ -357,20 +370,19 @@
             </div>
           </div>
           <div class="rv d2">
-            <div class="frame">
-              <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
-              <canvas id="heroAttr"></canvas>
-              <span class="lab">LORENZ · σ10 ρ28 β2.67 · live</span>
-              <span class="lab2">OBS ●</span>
+            <div class="earthwrap">
+              <video class="earth" autoplay muted loop playsinline preload="auto" poster="earth-globe.jpg">
+                <source src="earth-globe.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
         </div>
-
-        <!-- MARQUEES -->
-        <div class="marquee">
-          <div class="mtrack"><span>Interpretability <i>✦</i> World Models <i>✦</i> Observability <i>✦</i> Attribution <i>✦</i> Faithfulness <i>✦</i> AI Safety <i>✦</i> Diagnostics <i>✦</i> Open Source <i>✦</i></span><span>Interpretability <i>✦</i> World Models <i>✦</i> Observability <i>✦</i> Attribution <i>✦</i> Faithfulness <i>✦</i> AI Safety <i>✦</i> Diagnostics <i>✦</i> Open Source <i>✦</i></span></div>
-        </div>
       </section>
+
+      <!-- MARQUEE -->
+      <div class="marquee">
+        <div class="mtrack"><span>World Models <i>✦</i> Interpretability <i>✦</i> Observability <i>✦</i> Representation <i>✦</i> Faithfulness <i>✦</i> AI Safety <i>✦</i> Agent Foundations <i>✦</i> Open Source <i>✦</i></span><span>World Models <i>✦</i> Interpretability <i>✦</i> Observability <i>✦</i> Representation <i>✦</i> Faithfulness <i>✦</i> AI Safety <i>✦</i> Agent Foundations <i>✦</i> Open Source <i>✦</i></span></div>
+      </div>
 
       <!-- BENTO: THE LAB IN MOTION -->
       <section class="blk" id="lab">
@@ -552,7 +564,7 @@
 
       /* word rotator */
       const rot=document.getElementById('rot');
-      if(rot){ const words=['world model','representation','latent space','prediction','trajectory','the black box']; let wi=0;
+      if(rot){ const words=['world model','representation','latent space','prediction','trajectory','black box']; let wi=0;
         rot.textContent=words[0]; rot.style.transition='opacity .26s var(--ease), transform .26s var(--ease)';
         setInterval(()=>{ rot.style.opacity='0'; rot.style.transform='translateY(-12px)';
           setTimeout(()=>{ wi=(wi+1)%words.length; rot.textContent=words[wi]; rot.style.transform='translateY(12px)';
