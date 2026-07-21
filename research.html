@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#05060c" />
+    <meta name="color-scheme" content="light" />
+    <title>Research · Elemental Research</title>
+    <meta name="description" content="Open questions in world models and world model interpretability. Research from Elemental Research Lab, available on request." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='none' stroke='%231a00cc' stroke-width='3.3' stroke-linecap='round'%3E%3Ccircle cx='19' cy='21' r='12.6'/%3E%3Cline x1='7.5' y1='32.5' x2='32.5' y2='9.5'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --paper: #f4f2ea; --card: #ffffff; --ink: #14130c; --ink-2: #4f4d44; --muted: #8c8a7f;
+        --line: #12110016; --blue: #2f22ff; --coral: #ff4d2e; --green: #12b866; --gold: #d79a2a;
+        --disp: "Space Grotesk", system-ui, sans-serif; --sans: "Inter", system-ui, sans-serif; --mono: "JetBrains Mono", monospace;
+        --ease: cubic-bezier(0.16, 1, 0.3, 1); --gut: clamp(18px, 3.5vw, 48px);
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.5; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+      a { color: inherit; text-decoration: none; }
+      ::selection { background: var(--blue); color: #fff; }
+      .mono { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+      #prog { position: fixed; top: 0; left: 0; height: 3px; width: 0; z-index: 200; background: linear-gradient(90deg, var(--blue), var(--coral)); }
+
+      header.top { position: fixed; inset: 0 0 auto 0; z-index: 90; display: flex; align-items: center; justify-content: space-between; padding: 16px var(--gut); transition: background .5s, padding .5s var(--ease), box-shadow .5s; }
+      header.top.small { padding: 11px var(--gut); background: rgba(244,242,234,.85); backdrop-filter: blur(14px); box-shadow: 0 1px 0 var(--line); }
+      .brand { display: flex; align-items: center; gap: 11px; }
+      .brand .glyph { width: 28px; height: 28px; }
+      .brand .name { font-family: var(--disp); font-weight: 600; font-size: 19px; letter-spacing: -0.02em; }
+      .nav { display: flex; align-items: center; gap: 8px; }
+      .nav a { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); padding: 8px 12px; border-radius: 40px; transition: background .3s, color .3s; }
+      .nav a:hover { background: var(--ink); color: var(--paper); }
+      .nav .cta { background: var(--blue); color: #fff; }
+      .nav .cta:hover { background: var(--coral); }
+      header.top:not(.small) .name { color: #fff; }
+      header.top:not(.small) .glyph svg { stroke: #fff; }
+      header.top:not(.small) .nav a { color: rgba(255,255,255,.82); }
+      header.top:not(.small) .nav a:hover { background: #fff; color: #05060c; }
+      header.top:not(.small) .nav .cta { color: #fff; }
+      @media (max-width: 720px){ .nav a.hideM { display: none; } }
+
+      /* hero band */
+      .rhero { position: relative; min-height: 62vh; display: flex; align-items: flex-end; padding: 150px var(--gut) 60px; background: #05060c; color: #fff; overflow: hidden; }
+      .rhero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 70% at 78% 30%, #131f47 0%, rgba(5,6,12,0) 70%), radial-gradient(50% 60% at 10% 100%, #191452 0%, rgba(5,6,12,0) 72%); }
+      .rhero canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .6; }
+      .rhero .in { position: relative; z-index: 2; max-width: 1300px; margin: 0 auto; width: 100%; }
+      .rhero .eyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #8fa6ff; display: inline-flex; align-items: center; gap: 10px; margin-bottom: 22px; }
+      .rhero .eyebrow::before { content: ""; width: 24px; height: 1px; background: #8fa6ff; }
+      .rhero h1 { font-family: var(--disp); font-weight: 500; font-size: clamp(48px, 9vw, 128px); letter-spacing: -0.04em; line-height: 0.9; }
+      .rhero h1 em { font-style: normal; color: #8fa6ff; }
+      .rhero p { margin-top: 24px; max-width: 54ch; color: #c2c8de; font-size: clamp(15px, 1.6vw, 19px); }
+
+      /* body */
+      .wrap { max-width: 1300px; margin: 0 auto; padding: 100px var(--gut); }
+      .lead { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; flex-wrap: wrap; margin-bottom: 50px; }
+      .lead h2 { font-family: var(--disp); font-weight: 500; font-size: clamp(26px, 3.4vw, 40px); letter-spacing: -0.02em; max-width: 20ch; }
+      .lead h2 em { font-style: normal; color: var(--blue); }
+      .lead .note { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); max-width: 30ch; text-align: right; }
+
+      .rlist { display: grid; gap: 16px; }
+      .rcard { display: grid; grid-template-columns: 70px 1fr auto; gap: 30px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 34px; transition: transform .5s var(--ease), box-shadow .5s, border-color .5s; position: relative; overflow: hidden; }
+      .rcard::after { content: ""; position: absolute; inset: 0; background: radial-gradient(340px circle at var(--mx,80%) var(--my,0%), rgba(47,34,255,.06), transparent 60%); opacity: 0; transition: opacity .4s; pointer-events: none; }
+      .rcard:hover { transform: translateY(-4px); border-color: var(--blue); box-shadow: 0 34px 60px -44px rgba(47,34,255,.4); }
+      .rcard:hover::after { opacity: 1; }
+      .rcard .idx { font-family: var(--disp); font-weight: 600; font-size: 30px; color: var(--muted); letter-spacing: -0.02em; }
+      .rcard .mid h3 { font-family: var(--disp); font-weight: 600; font-size: clamp(22px, 2.6vw, 32px); letter-spacing: -0.02em; line-height: 1.02; margin-bottom: 8px; }
+      .rcard .mid p { color: var(--ink-2); font-size: 14.5px; max-width: 60ch; }
+      .rcard .mid .st { font-family: var(--mono); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); display: inline-flex; align-items: center; gap: 7px; margin-bottom: 14px; }
+      .rcard .mid .st .d { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+      .rcard .mid .st.wp .d { background: var(--green); }
+      .req { font-family: var(--mono); font-size: 12px; letter-spacing: .05em; text-transform: uppercase; padding: 14px 22px; border-radius: 40px; background: var(--ink); color: var(--paper); display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; position: relative; overflow: hidden; transition: transform .35s var(--ease); }
+      .req span { position: relative; z-index: 1; }
+      .req::before { content: ""; position: absolute; inset: 0; background: var(--blue); transform: translateX(-101%); transition: transform .45s var(--ease); }
+      .req:hover::before { transform: none; }
+      .req:hover { transform: translateY(-2px); }
+      @media (max-width: 820px){ .rcard { grid-template-columns: 1fr; gap: 18px; padding: 26px; } .rcard .idx { font-size: 22px; } .req { justify-self: start; } }
+
+      .accessbar { margin-top: 40px; background: #05060c; color: #fff; border-radius: 18px; padding: 44px; display: flex; justify-content: space-between; align-items: center; gap: 30px; flex-wrap: wrap; }
+      .accessbar h3 { font-family: var(--disp); font-weight: 500; font-size: clamp(22px, 3vw, 34px); letter-spacing: -0.02em; max-width: 22ch; }
+      .accessbar p { color: #c2c8de; font-size: 14px; margin-top: 8px; }
+      .accessbar .req { background: #fff; color: #05060c; }
+      .accessbar .req:hover span { color: #fff; }
+
+      footer { border-top: 1px solid var(--line); padding: 60px var(--gut) 40px; }
+      .fg { max-width: 1300px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+      .fg .name { font-family: var(--disp); font-weight: 600; font-size: 18px; }
+      .fg .name em { font-style: normal; color: var(--blue); }
+      .fg p { font-family: var(--mono); font-size: 11px; letter-spacing: .05em; color: var(--muted); text-transform: uppercase; }
+      .fg a { color: var(--blue); }
+
+      .rv { opacity: 0; transform: translateY(24px); transition: opacity 1s var(--ease), transform 1s var(--ease); }
+      .rv.in { opacity: 1; transform: none; }
+      .d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}.d4{transition-delay:.28s}
+      @media (prefers-reduced-motion: reduce){ .rv{opacity:1!important;transform:none!important} .rhero canvas{display:none} }
+    </style>
+  </head>
+  <body>
+    <div id="prog"></div>
+
+    <header class="top" id="top">
+      <a href="index.html" class="brand"><span class="glyph" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="#1a00cc" stroke-width="3.3" stroke-linecap="round"><circle cx="19" cy="21" r="12.6"/><line x1="7.5" y1="32.5" x2="32.5" y2="9.5"/></svg></span><span class="name">Elemental Research</span></a>
+      <div class="nav">
+        <a href="index.html" class="hideM">Home</a>
+        <a href="index.html#people" class="hideM">People</a>
+        <a href="index.html#mission" class="hideM">Mission</a>
+        <a href="mailto:bhavithchandra16@gmail.com?subject=Elemental%20Research%20%E2%80%94%20general%20enquiry" class="cta">Request access</a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="rhero">
+      <canvas id="rlat"></canvas>
+      <div class="in">
+        <div class="eyebrow rv">Elemental · World Model Interpretability</div>
+        <h1 class="rv d1">Open <em>questions</em>.</h1>
+      </div>
+    </section>
+
+    <!-- LIST -->
+    <div class="wrap">
+      <div class="lead">
+        <h2 class="rv">Five threads in <em>world model interpretability</em>.</h2>
+        <div class="note rv d1">Titles are working names. Full drafts available on request.</div>
+      </div>
+
+      <div class="rlist">
+        <div class="rcard rv" data-tilt>
+          <div class="idx">01</div>
+          <div class="mid">
+            <div class="st wp"><span class="d"></span> Working paper</div>
+            <h3>Right for the Right Reasons</h3>
+            <p>Separating genuine predictability from silent collapse in a world model's JEPA surprise signals.</p>
+          </div>
+          <a class="req" href="mailto:bhavithchandra16@gmail.com?subject=Access%20request%3A%20Right%20for%20the%20Right%20Reasons&body=Hi%20Bhavith%2C%20I%27d%20like%20access%20to%20this%20work.%20"><span>Request access ↗</span></a>
+        </div>
+
+        <div class="rcard rv d1" data-tilt>
+          <div class="idx">02</div>
+          <div class="mid">
+            <div class="st"><span class="d"></span> Draft</div>
+            <h3>Twin Worlds</h3>
+            <p>Making the counterfactual difference between paired worlds the primary training objective for world models.</p>
+          </div>
+          <a class="req" href="mailto:bhavithchandra16@gmail.com?subject=Access%20request%3A%20Twin%20Worlds&body=Hi%20Bhavith%2C%20I%27d%20like%20access%20to%20this%20work.%20"><span>Request access ↗</span></a>
+        </div>
+
+        <div class="rcard rv d2" data-tilt>
+          <div class="idx">03</div>
+          <div class="mid">
+            <div class="st wp"><span class="d"></span> Working paper</div>
+            <h3>Competence, Not Structure</h3>
+            <p>Evidence that systematic generalization tracks competence rather than clean factorization of representations.</p>
+          </div>
+          <a class="req" href="mailto:bhavithchandra16@gmail.com?subject=Access%20request%3A%20Competence%2C%20Not%20Structure&body=Hi%20Bhavith%2C%20I%27d%20like%20access%20to%20this%20work.%20"><span>Request access ↗</span></a>
+        </div>
+
+        <div class="rcard rv" data-tilt>
+          <div class="idx">04</div>
+          <div class="mid">
+            <div class="st"><span class="d"></span> Draft</div>
+            <h3>When Energy Decomposes</h3>
+            <p>An anchored, causally-validated account of per-constraint structure in energy-based models, and why it governs reasoning.</p>
+          </div>
+          <a class="req" href="mailto:bhavithchandra16@gmail.com?subject=Access%20request%3A%20When%20Energy%20Decomposes&body=Hi%20Bhavith%2C%20I%27d%20like%20access%20to%20this%20work.%20"><span>Request access ↗</span></a>
+        </div>
+
+        <div class="rcard rv d1" data-tilt>
+          <div class="idx">05</div>
+          <div class="mid">
+            <div class="st wp"><span class="d"></span> Working paper</div>
+            <h3>How Deep It Goes</h3>
+            <p>Measuring recursive belief depth in language models: how many levels of "I think that you think" they hold, and where it stops.</p>
+          </div>
+          <a class="req" href="mailto:bhavithchandra16@gmail.com?subject=Access%20request%3A%20How%20Deep%20It%20Goes&body=Hi%20Bhavith%2C%20I%27d%20like%20access%20to%20this%20work.%20"><span>Request access ↗</span></a>
+        </div>
+      </div>
+
+      <div class="accessbar rv">
+        <div>
+          <h3>Everything here is open on request.</h3>
+          <p>Email the maintainer for drafts, data, or to collaborate.</p>
+        </div>
+        <a class="req" href="mailto:bhavithchandra16@gmail.com?subject=Elemental%20Research%20%E2%80%94%20access%20%2F%20collaboration&body=Hi%20Bhavith%2C%20"><span>bhavithchandra16@gmail.com ↗</span></a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="fg">
+        <div class="name">Elemental<em>.</em> Research</div>
+        <p>© 2026 Elemental Research · World model interpretability · <a href="index.html">Home</a></p>
+      </div>
+    </footer>
+
+    <script>
+      const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const hdr=document.getElementById('top'), prog=document.getElementById('prog');
+      addEventListener('scroll', ()=>{ const h=document.documentElement, p=h.scrollTop/(h.scrollHeight-h.clientHeight); prog.style.width=(p*100)+'%'; hdr.classList.toggle('small', h.scrollTop>60); }, {passive:true});
+      const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }), {threshold:0.14, rootMargin:'0px 0px -6% 0px'});
+      document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+      document.querySelectorAll('[data-tilt]').forEach(el=>{ el.addEventListener('mousemove', e=>{ const b=el.getBoundingClientRect(); el.style.setProperty('--mx',(e.clientX-b.left)+'px'); el.style.setProperty('--my',(e.clientY-b.top)+'px'); }); });
+
+      /* faint constellation on hero */
+      (function lat(){ const cv=document.getElementById('rlat'); if(!cv||reduce) return; const ctx=cv.getContext('2d'); let W,H,DPR,pts;
+        function rs(){ const b=cv.getBoundingClientRect(); DPR=Math.min(devicePixelRatio||1,2); cv.width=b.width*DPR; cv.height=b.height*DPR; W=b.width; H=b.height; ctx.setTransform(DPR,0,0,DPR,0,0); pts=Array.from({length:48},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25})); }
+        new ResizeObserver(rs).observe(cv); rs();
+        (function f(){ ctx.clearRect(0,0,W,H); for(const p of pts){ p.x+=p.vx;p.y+=p.vy; if(p.x<0||p.x>W)p.vx*=-1; if(p.y<0||p.y>H)p.vy*=-1; }
+          for(let i=0;i<pts.length;i++){ for(let j=i+1;j<pts.length;j++){ const a=pts[i],b=pts[j],d=Math.hypot(a.x-b.x,a.y-b.y); if(d<120){ ctx.strokeStyle=`rgba(143,166,255,${(1-d/120)*0.22})`; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); } }
+            ctx.fillStyle='rgba(180,196,255,0.7)'; ctx.beginPath(); ctx.arc(pts[i].x,pts[i].y,1.3,0,6.283); ctx.fill(); } requestAnimationFrame(f); })();
+      })();
+    </script>
+  </body>
+</html>
