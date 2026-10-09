@@ -1,22 +1,27 @@
-# Elemental Research Lab
+# Elemental Research Lab website
 
-Website for **Elemental Research Lab** — a non-profit research group based in New York advancing AI safety through mechanistic interpretability.
+The public website for Elemental Research Lab, an open research group exploring world model interpretability, model diagnostics, and AI safety.
 
-## Stack
+## Pages
 
-- React 18 + TypeScript
-- Vite
-- Tailwind CSS
-- Fraunces (display) · Inter (body) · JetBrains Mono
+- `index.html` — lab-led homepage with a moving architectural cover and current project index
+- `about.html` — lab overview and research focus
+- `projects.html` — tools and active projects
+- `directions.html` — four core research directions and a visual overview of the research approach
+- `research.html` — working papers and draft requests
+- `people.html` — contributors
+- `contact.html` — ways to contact the lab
+- `site.css` and `site.js` — shared styling and mobile navigation
+- `public/elemental-mark.svg` — Elemental mark asset
 
-## Develop
+All seven pages are Vite entry points and are published to GitHub Pages by `.github/workflows/deploy.yml`. The cover uses two muted, looping MP4 panoramas made from the hall artwork, with the still image as a fallback and for reduced motion.
+
+## Local development
 
 ```bash
 pnpm install
 pnpm dev
 ```
-
-Then open `http://localhost:5173`.
 
 ## Build
 
@@ -24,6 +29,4 @@ Then open `http://localhost:5173`.
 pnpm build
 ```
 
-## License
-
-MIT
+The static pages can also be previewed with any local HTTP server.

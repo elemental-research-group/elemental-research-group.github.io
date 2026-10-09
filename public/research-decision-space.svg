@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 610" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="610" gradientUnits="userSpaceOnUse"><stop stop-color="#1C3444"/><stop offset=".58" stop-color="#152A3C"/><stop offset="1" stop-color="#122333"/></linearGradient>
+    <linearGradient id="path" x1="190" y1="470" x2="850" y2="100" gradientUnits="userSpaceOnUse"><stop stop-color="#ABD7DF"/><stop offset=".51" stop-color="#B9D5D4"/><stop offset="1" stop-color="#E8C7A2"/></linearGradient>
+    <radialGradient id="light" cx="0" cy="0" r="1" gradientTransform="translate(596 282) rotate(90) scale(337 450)" gradientUnits="userSpaceOnUse"><stop stop-color="#6D9EA7" stop-opacity=".31"/><stop offset="1" stop-color="#6D9EA7" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" stroke="#A9CFD2" stroke-opacity=".09"/></pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="11"/></filter>
+  </defs>
+  <rect width="960" height="610" fill="url(#bg)"/>
+  <rect width="960" height="610" fill="url(#light)"/>
+  <rect width="960" height="610" fill="url(#grid)"/>
+  <path d="M0 508 335 359 960 450M0 425 423 279 960 359M0 343 508 195 960 269M0 260 596 114 960 178" stroke="#B9D5D4" stroke-opacity=".09"/>
+  <path d="M119 478 326 382 514 436 711 328 862 383M119 478 326 382 500 288 699 321 855 213M119 478 326 382 501 291 663 164 850 122" stroke="#AED1D8" stroke-opacity=".17" stroke-width="3"/>
+  <path d="M119 478 326 382 501 291 699 321 855 213" stroke="url(#path)" stroke-width="20" stroke-opacity=".35" filter="url(#glow)"/>
+  <path d="M119 478 326 382 501 291 699 321 855 213" stroke="url(#path)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M326 382 514 436 711 328 862 383M501 291 663 164 850 122" stroke="#A7CBD2" stroke-opacity=".42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 8"/>
+  <path d="M501 291 665 430 848 462M699 321 796 285 889 297" stroke="#A7CBD2" stroke-opacity=".3" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 9"/>
+  <g fill="#E5F4F1"><circle cx="119" cy="478" r="6"/><circle cx="326" cy="382" r="6"/><circle cx="501" cy="291" r="7"/><circle cx="699" cy="321" r="6"/><circle cx="855" cy="213" r="7"/></g>
+  <g fill="#BBD2D4" opacity=".7"><circle cx="514" cy="436" r="4"/><circle cx="711" cy="328" r="4"/><circle cx="862" cy="383" r="4"/><circle cx="663" cy="164" r="4"/><circle cx="850" cy="122" r="4"/><circle cx="665" cy="430" r="4"/><circle cx="848" cy="462" r="4"/></g>
+  <circle cx="501" cy="291" r="22" stroke="#D8ECEA" stroke-opacity=".55"/><circle cx="855" cy="213" r="22" stroke="#EBD3B8" stroke-opacity=".5"/>
+  <path d="M119 466V445M106 478H83M855 188V166M878 213H901" stroke="#DDEBE9" stroke-opacity=".52"/>
+  <g fill="#D8E8E8" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2.5"><text x="60" y="82">A MODEL OF THE PRESENT</text><text x="716" y="540">POSSIBLE NEXT STATES</text></g>
+  <path d="M61 96H263M716 552H900" stroke="#D8E8E8" stroke-opacity=".3"/>
+  <rect x=".5" y=".5" width="959" height="609" stroke="#ECF7F5" stroke-opacity=".18"/>
+</svg>
