@@ -5,12 +5,12 @@ The public website for Elemental Research Lab, a research group exploring world 
 ## Pages
 
 - `index.html` — concise introduction and project index
-- `about.html` — lab overview and research focus
+- `about.html` — lab overview and method
 - `projects.html` — tools and active projects
 - `directions.html` — four core research directions
 - `research.html` — working papers and draft requests
 - `people.html` — contributors
-- `contact.html` — ways to contact the lab
+- `contact.html` — lab email
 - `clean.css` and `site.js` — shared styling and small page utilities
 - `public/elemental-mark.svg` — Elemental mark asset
 

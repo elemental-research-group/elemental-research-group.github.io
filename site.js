@@ -1,7 +1,7 @@
 if (/(?:^|\/)index\.html$/.test(window.location.pathname) || window.location.pathname.endsWith("/")) {
   const oldSections = {
     "#about": "about.html",
-    "#focus": "about.html#focus",
+    "#focus": "about.html",
     "#work": "projects.html",
     "#people": "people.html",
     "#contact": "contact.html",
