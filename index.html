@@ -5,7 +5,7 @@
   <title>Elemental Research | Understand AI from the inside</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site.css"><script type="module" src="site.js"></script>
+  <link rel="stylesheet" href="site.css"><link rel="stylesheet" href="paper.css"><script type="module" src="site.js"></script>
 </head>
 <body class="page-home">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -26,20 +26,16 @@
         <a class="button-text" href="projects.html">See projects <span class="link-arrow-icon" aria-hidden="true"></span></a>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="portal-frame">
-        <div class="portal-media">
-          <picture>
-            <source media="(min-width: 768px)" srcset="athens-hall-orbit-poster-4k-ultra.jpg">
-            <img class="hero-artwork" src="athens-hall-orbit-poster-1080-ultra.jpg" alt="Pixel art of an empty Renaissance hall with golden columns, blue mosaics, and a sunlit archway" fetchpriority="high">
-          </picture>
-          <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="athens-hall-orbit-poster-4k-ultra.jpg" aria-hidden="true">
-            <source media="(min-width: 768px)" src="athens-hall-orbit-4k-ultra.mp4" type="video/mp4">
-            <source src="athens-hall-orbit-1080-ultra.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
+    <div class="home-facts"><div><span>Field</span><strong>World models + interpretability</strong></div><div><span>Work</span><strong>Research + open tools</strong></div><div><span>Contact</span><a href="mailto:bc4066@nyu.edu">bc4066@nyu.edu</a></div></div>
+  </div>
+</section>
+<section class="home-manifesto" aria-labelledby="manifesto-title"><div class="narrow"><h2 id="manifesto-title">Elemental Research</h2><p>We study how intelligent systems form a picture of the world, how that picture shapes their predictions, and how to make those internal processes open to inspection.</p></div></section>
+<section class="editorial-section" aria-labelledby="agenda-title">
+  <div class="shell editorial-heading"><span class="eyebrow">Research agenda</span><div><h2 id="agenda-title">The questions behind the work.</h2><p>Our research follows a model from what it observes to what it represents, predicts, and ultimately does.</p></div></div>
+  <div class="shell editorial-grid editorial-grid-three">
+    <a class="editorial-card" href="directions.html#directions"><span class="card-index">REPRESENTATION</span><h3>What is learned?</h3><p>Study the internal state a model builds from its environment.</p><span class="text-link">Explore world models <b class="link-arrow-icon" aria-hidden="true"></b></span></a>
+    <a class="editorial-card" href="directions.html#directions"><span class="card-index">MECHANISM</span><h3>What matters?</h3><p>Test whether a signal explains a prediction or merely accompanies it.</p><span class="text-link">Explore interpretability <b class="link-arrow-icon" aria-hidden="true"></b></span></a>
+    <a class="editorial-card" href="directions.html#directions"><span class="card-index">RELIABILITY</span><h3>What holds up?</h3><p>Compare behavior across trajectories, interventions, and evaluation settings.</p><span class="text-link">Explore evaluation <b class="link-arrow-icon" aria-hidden="true"></b></span></a>
   </div>
 </section>
 <section class="home-projects section-pad" id="projects" aria-labelledby="projects-title">
@@ -85,6 +81,14 @@
     </div>
     <a class="all-projects-link" href="projects.html">View all project details <span class="link-arrow-icon" aria-hidden="true"></span></a>
   </div>
+</section>
+<section class="editorial-section evidence-section" aria-labelledby="evidence-title">
+  <div class="shell editorial-heading"><span class="eyebrow">Research practice</span><div><h2 id="evidence-title">Follow the evidence through the model.</h2><p>Tools are most useful when they make a research claim inspectable. These are the recurring moves in our work.</p></div></div>
+  <div class="shell trace-rail" aria-label="Research process"><div><span>OBSERVE</span><strong>Capture behavior</strong><p>Record trajectories and internal states.</p></div><div><span>TRACE</span><strong>Locate signals</strong><p>Inspect activations, beliefs, and predictions.</p></div><div><span>TEST</span><strong>Challenge explanations</strong><p>Compare interventions and alternatives.</p></div><div><span>REPORT</span><strong>Share what holds</strong><p>Publish tools and working arguments.</p></div></div>
+</section>
+<section class="editorial-section reading-section" aria-labelledby="reading-title">
+  <div class="shell editorial-heading"><span class="eyebrow">Working notes</span><div><h2 id="reading-title">Ideas under examination.</h2><p>Current drafts are research in progress. Their questions guide the tools we build.</p></div></div>
+  <div class="shell reading-list"><a href="research.html"><span>WORLD MODELS</span><strong>Right for the Right Reasons</strong><b class="link-arrow-icon" aria-hidden="true"></b></a><a href="research.html"><span>COUNTERFACTUAL LEARNING</span><strong>Twin Worlds</strong><b class="link-arrow-icon" aria-hidden="true"></b></a><a href="research.html"><span>GENERALIZATION</span><strong>Competence, Not Structure</strong><b class="link-arrow-icon" aria-hidden="true"></b></a></div>
 </section>
 <section class="home-next" aria-labelledby="next-title">
   <div class="shell home-next-inner">

@@ -32,20 +32,3 @@ if (menuButton && mobileNav) {
 document.querySelectorAll("[data-year]").forEach((node) => {
   node.textContent = String(new Date().getFullYear());
 });
-
-if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  document.querySelectorAll("video").forEach((video) => video.pause());
-}
-
-document.querySelectorAll(".portal-media video").forEach((video) => {
-  const reveal = () => video.classList.add("is-ready");
-  if (video.readyState >= 2) reveal();
-  else video.addEventListener("loadeddata", reveal, { once: true });
-});
-
-const coverVideo = document.querySelector(".page-home .hero-video");
-if (coverVideo) {
-  const slowOrbit = () => { coverVideo.playbackRate = 0.25; };
-  coverVideo.addEventListener("loadedmetadata", slowOrbit, { once: true });
-  slowOrbit();
-}
