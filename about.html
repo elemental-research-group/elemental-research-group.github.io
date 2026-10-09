@@ -14,12 +14,17 @@
   <div class="content-shell">
     <section class="page-intro" aria-labelledby="about-title">
       <h1 id="about-title">About the lab.</h1>
-      <p>Elemental Research works at the boundary of world-model research and interpretability. We publish tools, experiments, and technical drafts.</p>
+      <p>Elemental Research works at the boundary of world-model research and interpretability. We develop tools for inspecting model behavior and pursue questions that can be tested through experiments.</p>
     </section>
 
     <section class="content-section concise-section" aria-labelledby="method-title">
-      <div class="section-heading"><span class="eyebrow">METHOD</span><h2 id="method-title">Make claims inspectable</h2></div>
-      <p>We capture internal states, replay trajectories, and use interventions before treating a pattern as an explanation.</p>
+      <div class="section-heading"><span class="eyebrow">APPROACH</span><h2 id="method-title">Make claims inspectable</h2></div>
+      <p>A useful explanation should survive more than a visual inspection. We look for evidence that an internal signal changes a model’s behavior, then make the experiment possible to examine again.</p>
+      <div class="info-list method-list">
+        <div class="info-row"><h3>Observe</h3><p>Record representations, predictions, and uncertainty as a model processes an environment or sequence.</p></div>
+        <div class="info-row"><h3>Intervene</h3><p>Replay trajectories and alter a specific state or input to test whether a proposed mechanism matters.</p></div>
+        <div class="info-row"><h3>Evaluate</h3><p>Compare the resulting behavior across examples, including cases where a model’s prediction fails.</p></div>
+      </div>
     </section>
   </div>
 </main>

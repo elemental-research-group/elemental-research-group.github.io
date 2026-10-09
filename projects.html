@@ -18,15 +18,19 @@
     <section class="feature-project" id="worldmodellens" aria-labelledby="wml-title">
       <span class="eyebrow">FLAGSHIP PROJECT · OPEN SOURCE</span>
       <h2 id="wml-title">WorldModelLens</h2>
-      <p>An observability toolkit for world models. It captures internal states, replays trajectories, and supports causal analysis of model behavior.</p>
-      <div class="feature-tags"><span>Activation caching</span><span>Trajectory replay</span><span>Causal tracing</span></div>
+      <p>An observability and replay toolkit for studying world models. It makes a model’s internal activity available for closer inspection, from representations and uncertainty to the effects of an intervention.</p>
+      <div class="feature-details" aria-label="WorldModelLens capabilities">
+        <div><h3>Observe</h3><p>Cache activations and inspect saliency, belief tracking, surprise, and uncertainty.</p></div>
+        <div><h3>Replay</h3><p>Revisit trajectories and compare alternative inputs or branches of imagined behavior.</p></div>
+        <div><h3>Trace</h3><p>Use causal tracing and related interventions to investigate which internal paths matter.</p></div>
+      </div>
       <a class="text-link" href="https://github.com/Bhavith-Chandra/WorldModelLens" target="_blank" rel="noopener noreferrer">Explore the repository <span class="arrow" aria-hidden="true">↗</span></a>
     </section>
     <section class="content-section" aria-labelledby="other-projects-title">
       <div class="section-heading"><h2 id="other-projects-title">Other projects</h2></div>
       <div class="info-list">
-        <article class="info-row" id="aaf"><div><span class="eyebrow">RESEARCH FRAMEWORK</span><h3>Attribution–Attention Faithfulness</h3></div><p>Tests whether the signals a model highlights are the ones that influence its prediction.</p></article>
-        <article class="info-row" id="eval-suite"><div><span class="eyebrow">IN DEVELOPMENT</span><h3>Eval Suite</h3></div><p>Developing reproducible diagnostics for comparing model internals and behavior.</p></article>
+        <article class="info-row" id="aaf"><div><span class="eyebrow">RESEARCH FRAMEWORK</span><h3>Attribution–Attention Faithfulness</h3></div><p>Asks whether the signals a model highlights are the ones that influence its prediction. The framework compares an attribution with the change produced when the corresponding information is altered.</p></article>
+        <article class="info-row" id="eval-suite"><div><span class="eyebrow">IN DEVELOPMENT</span><h3>Eval Suite</h3></div><p>A developing set of reproducible diagnostics for comparing model internals and behavior. The goal is to make evaluations easier to repeat across examples and model variants.</p></article>
       </div>
     </section>
 
