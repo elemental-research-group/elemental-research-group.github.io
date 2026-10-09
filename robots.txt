@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://elemental-research-group.github.io/sitemap.xml

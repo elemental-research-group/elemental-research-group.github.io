@@ -1,0 +1,19 @@
+/* TEAM */
+Maintainer: Bhavith Chandra
+Site: https://Bhavith-Chandra.github.io
+Contact: open a GitHub issue at https://github.com/elemental-research-group/elemental-research-group.github.io/issues
+
+/* THANKS */
+Open-source community
+
+/* SITE */
+Last update: 2026
+Standards: HTML5, CSS3, JS
+Pages: HTML, CSS, JavaScript
+Build: Vite
+Source: https://github.com/elemental-research-group/elemental-research-group.github.io
+
+/* DISCLAIMER */
+Elemental Research Lab is an independent open-source research group
+hosted on GitHub Pages. It is not affiliated with, endorsed by,
+or sponsored by any university, company, or institution.
