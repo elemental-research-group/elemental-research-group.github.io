@@ -1,47 +1,35 @@
 <!doctype html><html lang="en"><head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f8f8f6">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#ffffff">
   <meta name="description" content="Learn how Elemental Research Lab studies the representations and behavior of AI systems.">
-  <meta property="og:type" content="website"><meta property="og:title" content="About"><meta property="og:description" content="Learn how Elemental Research Lab studies the representations and behavior of AI systems."><meta property="og:url" content="https://elemental-research-group.github.io/about.html"><meta property="og:image" content="https://elemental-research-group.github.io/athens-architecture-pixel.png">
+  <meta property="og:type" content="website"><meta property="og:title" content="About"><meta property="og:description" content="Learn how Elemental Research Lab studies the representations and behavior of AI systems."><meta property="og:url" content="https://elemental-research-group.github.io/about.html">
   <title>About | Elemental Research Lab</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site.css"><link rel="stylesheet" href="paper.css"><script type="module" src="site.js"></script>
+  <link rel="stylesheet" href="clean.css"><script type="module" src="site.js"></script>
 </head>
 <body class="page-interior page-about">
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header"><div class="shell header-inner">
-      <a class="brand" href="index.html" aria-label="Elemental Research home"><img class="brand-mark" src="elemental-mark.svg" alt="" width="42" height="42"><span class="brand-name">Elemental Research</span></a>
-      <nav class="desktop-nav" aria-label="Main navigation"><a href="about.html" aria-current="page">About</a><a href="projects.html">Projects</a><a href="directions.html">Research</a><a href="people.html">People</a></nav>
-      <a class="header-contact" href="contact.html">Contact <span class="link-arrow-icon" aria-hidden="true"></span></a>
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
-    </div><nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden><a href="about.html" aria-current="page">About</a><a href="projects.html">Projects</a><a href="directions.html">Research</a><a href="people.html">People</a><a href="contact.html">Contact <span class="link-arrow-icon" aria-hidden="true"></span></a></nav></header>
+<header class="site-header"><div class="shell header-inner"><a class="brand" href="index.html" aria-label="Elemental Research home"><img class="brand-mark" src="elemental-mark.svg" alt="" width="42" height="42"><span class="brand-name">Elemental Research</span></a><nav class="desktop-nav" aria-label="Main navigation"><a href="about.html" aria-current="page">About</a><a href="projects.html">Projects</a><a href="directions.html">Research</a><a href="people.html">People</a><a href="contact.html">Contact</a></nav></div></header>
 <main id="main">
-<section class="interior-cover about-cover" id="about" aria-labelledby="about-title">
-  <div class="shell interior-cover-grid">
-    <h1 id="about-title">Making AI systems <span>understandable.</span></h1>
-    <div class="about-statements">
-      <p>Elemental Research Lab studies how AI systems form representations, make predictions, and use information.</p>
-      <p>We turn research questions into tools for inspecting model behavior, and share our work so others can examine and build on it.</p>
-    </div>
+  <div class="content-shell">
+    <section class="page-intro" aria-labelledby="about-title">
+      <h1 id="about-title">About the lab.</h1>
+      <p>Elemental Research studies how AI systems form representations, make predictions, and act on information. We build tools that let researchers inspect and test those processes.</p>
+    </section>
+    <section class="content-section" id="focus" aria-labelledby="focus-title">
+      <div class="section-heading"><span class="eyebrow">FOCUS</span><h2 id="focus-title">Our questions</h2></div>
+      <div class="info-list">
+        <div class="info-row"><h3>World models</h3><p>How does a system represent and predict its environment?</p></div>
+        <div class="info-row"><h3>Interpretability</h3><p>Which internal signals actually shape a model's behavior?</p></div>
+        <div class="info-row"><h3>Evaluation</h3><p>Do explanations and predictions hold up across new settings?</p></div>
+      </div>
+    </section>
+    <section class="content-section concise-section" aria-labelledby="method-title">
+      <div class="section-heading"><span class="eyebrow">METHOD</span><h2 id="method-title">Make claims inspectable</h2></div>
+      <p>We record internal states, replay model behavior, and test proposed explanations with interventions. Our tools and working papers make the evidence available for others to examine.</p>
+      <div class="inline-links"><a class="text-link" href="projects.html">Projects <span class="arrow" aria-hidden="true">↗</span></a><a class="text-link" href="research.html">Working papers <span class="arrow" aria-hidden="true">↗</span></a></div>
+    </section>
   </div>
-</section>
-<section class="about about-focus section-pad" id="focus" aria-label="Research focus">
-  <div class="shell focus-list"><article><h3>World models</h3><p>How do predictive systems represent and reason about their environment?</p></article><article><h3>Interpretability</h3><p>What computations and representations sit behind a model's behavior?</p></article><article><h3>Model diagnostics</h3><p>Do observed signals reflect what actually drives a prediction?</p></article></div>
-</section>
-<section class="editorial-section" aria-labelledby="about-method-title">
-  <div class="shell editorial-heading"><span class="eyebrow">Approach</span><div><h2 id="about-method-title">A question first. A trace second. A claim only after.</h2><p>We build the means to inspect a system while we study it. This keeps research questions connected to observable behavior.</p></div></div>
-  <div class="shell method-list">
-    <div><span>QUESTION</span><h3>Form the question</h3><p>Start with a precise uncertainty about representation, prediction, or behavior.</p></div>
-    <div><span>INSTRUMENT</span><h3>Make it inspectable</h3><p>Capture internal states, replay trajectories, and compare what changes under intervention.</p></div>
-    <div><span>TEST</span><h3>Test the explanation</h3><p>Look for evidence that survives alternate examples and measurements.</p></div>
-    <div><span>SHARE</span><h3>Share the artifact</h3><p>Release tools, drafts, and methods that others can examine and extend.</p></div>
-  </div>
-</section>
-<section class="editorial-section about-output" aria-labelledby="about-output-title">
-  <div class="shell editorial-heading"><span class="eyebrow">Outputs</span><div><h2 id="about-output-title">Research you can inspect.</h2><p>The lab's public work takes several forms, each with a different role in the research cycle.</p></div></div>
-  <div class="shell editorial-grid editorial-grid-two"><a class="editorial-card" href="projects.html"><span class="card-index">TOOLS</span><h3>Instrument the model.</h3><p>WorldModelLens gives researchers a way to observe, replay, and test the behavior of world models.</p><span class="text-link">Explore projects <b class="link-arrow-icon" aria-hidden="true"></b></span></a><a class="editorial-card" href="research.html"><span class="card-index">WORKING PAPERS</span><h3>Expose the argument.</h3><p>Drafts state the questions, assumptions, and possible explanations behind the technical work.</p><span class="text-link">Read current drafts <b class="link-arrow-icon" aria-hidden="true"></b></span></a></div>
-</section>
-<section class="editorial-cta"><div class="shell"><span class="eyebrow">The group</span><h2>Built by researchers and contributors across disciplines.</h2><a class="text-link" href="people.html">Meet the people <b class="link-arrow-icon" aria-hidden="true"></b></a></div></section>
 </main>
 <footer class="site-footer"><div class="shell"><div class="footer-top"><a class="brand" href="index.html" aria-label="Elemental Research home"><img class="brand-mark" src="elemental-mark.svg" alt="" width="42" height="42"><span class="brand-name">Elemental Research</span></a><div><a href="about.html">About</a><a href="projects.html">Projects</a><a href="directions.html">Research</a><a href="research.html">Working papers</a><a href="people.html">People</a><a href="contact.html">Contact</a><a href="https://github.com/Bhavith-Chandra/WorldModelLens" target="_blank" rel="noopener noreferrer">GitHub <span class="link-arrow-icon" aria-hidden="true"></span></a></div></div><div class="footer-bottom"><span>© <span data-year>2026</span> Elemental Research Lab</span></div></div></footer>
 </body></html>

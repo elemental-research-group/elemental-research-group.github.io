@@ -3,99 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f8f8f6">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Explore Elemental Research Lab's directions in world models, interpretability, embedded world models, continual learning, and their applied research.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Research directions | Elemental Research Lab">
   <meta property="og:description" content="World models, interpretability, embedded world models, continual learning, and applied research.">
   <meta property="og:url" content="https://elemental-research-group.github.io/directions.html">
-  <meta property="og:image" content="https://elemental-research-group.github.io/athens-architecture-pixel.png">
+
   <title>Research directions | Elemental Research Lab</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site.css"><link rel="stylesheet" href="paper.css">
+  <link rel="stylesheet" href="clean.css">
   <script type="module" src="site.js"></script>
 </head>
 <body class="page-interior page-directions">
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header"><div class="shell header-inner">
-  <a class="brand" href="index.html" aria-label="Elemental Research home"><img class="brand-mark" src="elemental-mark.svg" alt="" width="42" height="42"><span class="brand-name">Elemental Research</span></a>
-  <nav class="desktop-nav" aria-label="Main navigation"><a href="about.html">About</a><a href="projects.html">Projects</a><a href="directions.html" aria-current="page">Research</a><a href="people.html">People</a></nav>
-  <a class="header-contact" href="contact.html">Contact <span class="link-arrow-icon" aria-hidden="true"></span></a>
-  <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
-  </div><nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden><a href="about.html">About</a><a href="projects.html">Projects</a><a href="directions.html" aria-current="page">Research</a><a href="people.html">People</a><a href="contact.html">Contact <span class="link-arrow-icon" aria-hidden="true"></span></a></nav></header>
+<header class="site-header"><div class="shell header-inner"><a class="brand" href="index.html" aria-label="Elemental Research home"><img class="brand-mark" src="elemental-mark.svg" alt="" width="42" height="42"><span class="brand-name">Elemental Research</span></a><nav class="desktop-nav" aria-label="Main navigation"><a href="about.html">About</a><a href="projects.html">Projects</a><a href="directions.html" aria-current="page">Research</a><a href="people.html">People</a><a href="contact.html">Contact</a></nav></div></header>
 <main id="main">
-  <section class="directions-hero" aria-labelledby="directions-title">
-    <div class="shell directions-hero-grid">
-      <div>
-        <h1 id="directions-title">Research <em>directions.</em></h1>
+  <div class="content-shell">
+    <section class="page-intro" aria-labelledby="directions-title">
+      <h1 id="directions-title">Research directions.</h1>
+      <p>We study how AI systems build a picture of the world, use it to make decisions, and update it when the world changes.</p>
+    </section>
+    <section class="content-section" id="directions" aria-labelledby="directions-list-title">
+      <div class="section-heading"><span class="eyebrow">RESEARCH</span><h2 id="directions-list-title">Four connected areas</h2></div>
+      <div class="info-list">
+        <article class="info-row"><h3>World models</h3><p>How do models learn changing environments and predict what happens next?</p></article>
+        <article class="info-row"><h3>Interpretability</h3><p>What do internal representations encode, and which signals drive a prediction?</p></article>
+        <article class="info-row"><h3>Embedded world models</h3><p>How can an agent use a model to compare possible actions before acting?</p></article>
+        <article class="info-row"><h3>Continual learning</h3><p>How can a model adapt as new evidence and changing environments arrive?</p></article>
       </div>
-      <div class="directions-intro">
-        <p>We study how an AI builds a picture of the world and how to make that picture understandable to people.</p>
-        <div class="directions-hero-links"><a href="#directions">Explore the directions <span class="link-arrow-icon arrow-down" aria-hidden="true"></span></a><a href="research.html">Working papers <span class="link-arrow-icon" aria-hidden="true"></span></a></div>
-      </div>
-    </div>
-    <div class="shell directions-sequence" aria-label="How a world model works">
-      <div><strong>Observe</strong><small>What is happening now?</small></div>
-      <div><strong>Understand</strong><small>What state explains it?</small></div>
-      <div><strong>Imagine</strong><small>What could happen next?</small></div>
-      <div><strong>Act</strong><small>What holds up best?</small></div>
-    </div>
-  </section>
-
-  <section class="directions-core section-pad" id="directions" aria-labelledby="core-title">
-    <div class="shell">
-      <div class="directions-section-heading"><h2 id="core-title">Four connected <em>directions.</em></h2><p>How systems build, use, and revise a model of their environment and how we inspect the result.</p></div>
-      <div class="directions-grid">
-        <article class="direction-card"><span class="direction-number">WORLD MODELS</span><h3>Learning how the world works.</h3><p>How can a model learn an environment's changing state, predict what happens next, and account for the effect of an action?</p><span class="direction-question">Represent · Predict · Simulate</span></article>
-        <article class="direction-card"><span class="direction-number">INTERPRETABILITY</span><h3>Making the model legible.</h3><p>What has a model actually learned inside, and which internal signals drive a prediction? We build tools to make those questions testable.</p><a class="direction-link" href="projects.html#worldmodellens">Explore WorldModelLens <span class="link-arrow-icon" aria-hidden="true"></span></a></article>
-        <article class="direction-card"><span class="direction-number">EMBEDDED WORLD MODELS</span><h3>Testing a plan before acting.</h3><p>What changes when a world model sits inside an AI agent, letting the agent simulate possible outcomes before choosing a step?</p><span class="direction-question">Model · Compare · Decide</span></article>
-        <article class="direction-card"><span class="direction-number">CONTINUAL LEARNING</span><h3>Keeping the picture current.</h3><p>How can a model keep learning from new data after training, especially when the environment itself changes?</p><span class="direction-question">Update · Adapt · Recheck</span></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="editorial-section" aria-labelledby="evidence-questions-title">
-    <div class="shell editorial-heading"><span class="eyebrow">Research questions</span><div><h2 id="evidence-questions-title">What would change our minds?</h2><p>Each direction needs a testable account of what a model knows and how that knowledge affects behavior.</p></div></div>
-    <div class="shell question-list">
-      <div><span>REPRESENTATION</span><h3>Does the internal state carry the relevant information?</h3><p>Compare what a model encodes with what it predicts across changing environments.</p></div>
-      <div><span>CAUSALITY</span><h3>Does a proposed explanation change the result?</h3><p>Use interventions and alternative trajectories to separate correlation from influence.</p></div>
-      <div><span>GENERALIZATION</span><h3>Does the account survive a new setting?</h3><p>Look for explanations that hold beyond the examples used to find them.</p></div>
-    </div>
-  </section>
-
-  <section class="miko-direction section-pad" aria-labelledby="research-method-title">
-    <div class="shell miko-grid">
-      <div class="miko-copy">
-        <span class="home-section-label">Research approach</span>
-        <h2 id="research-method-title">From observations <em>to understanding.</em></h2>
-        <p>We study how models turn observations into internal representations and predictions. By tracing and comparing internal states, we can test which signals actually shape a model's behavior.</p>
-        <span class="miko-status">REPRESENTATIONS · PREDICTIONS · EVIDENCE</span>
-      </div>
-      <figure class="miko-figure">
-        <img src="world-model-research.webp" alt="Glass layers showing an observed landscape becoming internal patterns and several predicted scenes" width="1672" height="940" loading="lazy">
-        <figcaption><span>WORLD MODEL RESEARCH</span><span>From observation to representation to possible futures.</span></figcaption>
-      </figure>
-    </div>
-    <div class="shell miko-steps" aria-label="Research workflow">
-      <div><strong>Observe</strong><p>Study model inputs and outputs.</p></div>
-      <div><strong>Trace</strong><p>Inspect internal representations.</p></div>
-      <div><strong>Intervene</strong><p>Test which signals matter.</p></div>
-      <div><strong>Compare</strong><p>Check behavior across cases.</p></div>
-      <div><strong>Explain</strong><p>Make findings understandable.</p></div>
-    </div>
-  </section>
-
-  <section class="editorial-section reading-section" aria-labelledby="directions-reading-title">
-    <div class="shell editorial-heading"><span class="eyebrow">Current drafts</span><div><h2 id="directions-reading-title">Questions in writing.</h2><p>Working papers connect the broader research directions to concrete hypotheses and methods.</p></div></div>
-    <div class="shell reading-list"><a href="research.html"><span>WORLD MODELS</span><strong>Right for the Right Reasons</strong><b class="link-arrow-icon" aria-hidden="true"></b></a><a href="research.html"><span>COUNTERFACTUAL LEARNING</span><strong>Twin Worlds</strong><b class="link-arrow-icon" aria-hidden="true"></b></a><a href="research.html"><span>GENERALIZATION</span><strong>Competence, Not Structure</strong><b class="link-arrow-icon" aria-hidden="true"></b></a></div>
-  </section>
-
-  <section class="directions-more section-pad">
-    <div class="shell directions-more-inner"><h2>Explore <em>the work.</em></h2><div><p>See current drafts and open tools built around these questions.</p><a href="research.html">Working papers <span class="link-arrow-icon" aria-hidden="true"></span></a><a href="projects.html">Projects <span class="link-arrow-icon" aria-hidden="true"></span></a></div></div>
-  </section>
+    </section>
+    <section class="content-section concise-section" aria-labelledby="research-method-title">
+      <div class="section-heading"><span class="eyebrow">APPROACH</span><h2 id="research-method-title">Observe, test, compare</h2></div>
+      <p>We inspect model states, replay behavior, and intervene on internal signals to test explanations against evidence.</p>
+      <div class="inline-links"><a class="text-link" href="projects.html">Explore the tools <span class="arrow" aria-hidden="true">↗</span></a><a class="text-link" href="research.html">Working papers <span class="arrow" aria-hidden="true">↗</span></a></div>
+    </section>
+  </div>
 </main>
 <footer class="site-footer"><div class="shell"><div class="footer-top"><a class="brand" href="index.html" aria-label="Elemental Research home"><img class="brand-mark" src="elemental-mark.svg" alt="" width="42" height="42"><span class="brand-name">Elemental Research</span></a><div><a href="about.html">About</a><a href="projects.html">Projects</a><a href="directions.html">Research</a><a href="research.html">Working papers</a><a href="people.html">People</a><a href="contact.html">Contact</a><a href="https://github.com/Bhavith-Chandra/WorldModelLens" target="_blank" rel="noopener noreferrer">GitHub <span class="link-arrow-icon" aria-hidden="true"></span></a></div></div><div class="footer-bottom"><span>© <span data-year>2026</span> Elemental Research Lab</span></div></div></footer>
 </body>

@@ -4,17 +4,17 @@ The public website for Elemental Research Lab, a research group exploring world 
 
 ## Pages
 
-- `index.html` — lab thesis, research agenda, projects, and working notes
+- `index.html` — concise introduction and project index
 - `about.html` — lab overview and research focus
 - `projects.html` — tools and active projects
-- `directions.html` — four core research directions and the lab's research approach
+- `directions.html` — four core research directions
 - `research.html` — working papers and draft requests
 - `people.html` — contributors
 - `contact.html` — ways to contact the lab
-- `site.css`, `paper.css`, and `site.js` — shared styling and navigation
+- `clean.css` and `site.js` — shared styling and small page utilities
 - `public/elemental-mark.svg` — Elemental mark asset
 
-All seven pages are Vite entry points and are published to GitHub Pages by `.github/workflows/deploy.yml`. The current presentation uses a white editorial layout, restrained typography, and minimal motion. Older cover media remains in `public/` but is not loaded by the pages.
+All seven pages are Vite entry points and are published to GitHub Pages by `.github/workflows/deploy.yml`. The site uses one compact editorial layout across every page.
 
 ## Local development
 
