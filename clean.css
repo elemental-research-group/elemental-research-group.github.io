@@ -92,7 +92,6 @@ img { max-width: 100%; }
 .publication-main h2 { margin: 0 0 11px; font: 400 26px/1.2 var(--serif); letter-spacing: -.02em; }
 .publication-summary { margin: 0; color: #3e3e3e; font: 400 16px/1.5 var(--serif); }
 .publication-authors { margin: 15px 0 0; color: var(--soft); font: 400 13px/1.5 var(--sans); }
-.publication-context { margin: 15px 0 0; color: var(--soft); font: 400 12px/1.5 var(--mono); }
 .publication-detail { margin-top: 22px; border-top: 1px solid var(--line); padding-top: 13px; }
 .publication-detail summary { display: flex; align-items: center; justify-content: space-between; cursor: pointer; list-style: none; color: var(--ink); font: 500 11px/1.4 var(--mono); }
 .publication-detail summary::-webkit-details-marker { display: none; }
