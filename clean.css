@@ -111,6 +111,8 @@ img { max-width: 100%; }
 .publication-note a:hover { color: var(--blue); border-color: var(--blue); }
 .page-people .content-shell { width: min(calc(100% - 48px), 1200px); }
 .people-section { padding-top: 24px; }
+.people-featured-row { display: flex; justify-content: center; margin-bottom: 13px; }
+.people-featured-row .person-card { flex: none; width: calc(20% - 10.4px); }
 .people-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 13px; }
 .person-card { position: relative; display: flex; flex-direction: column; align-items: center; min-width: 0; border: 1px solid transparent; border-radius: 18px; padding: 18px 14px 20px; background: var(--panel); text-align: center; transition: border-color .18s ease, background-color .18s ease, transform .18s ease; }
 .person-card:hover { border-color: #d5d5d2; background: #f2f2f0; transform: translateY(-2px); }
@@ -140,10 +142,12 @@ img { max-width: 100%; }
 .footer-bottom { margin-top: 24px; color: #888; text-align: center; font: 400 10px var(--mono); }
 
 @media (max-width: 1050px) {
+  .people-featured-row .person-card { width: calc(25% - 9.75px); }
   .people-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
 @media (max-width: 780px) {
+  .people-featured-row .person-card { width: calc(33.333% - 8.667px); }
   .people-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
@@ -183,6 +187,8 @@ img { max-width: 100%; }
   .publication-main h2 { font-size: 22px; }
   .publication-summary { font-size: 15px; }
   .page-people .content-shell { width: min(calc(100% - 38px), 780px); }
+  .people-featured-row { margin-bottom: 11px; }
+  .people-featured-row .person-card { width: calc(50% - 5.5px); }
   .people-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px; }
   .person-card { border-radius: 15px; padding: 14px 12px 17px; }
   .person-card-photo { width: min(100%, 150px); border-radius: 9px; }
@@ -195,6 +201,7 @@ img { max-width: 100%; }
 }
 
 @media (max-width: 350px) {
+  .people-featured-row .person-card { width: 100%; }
   .people-grid { grid-template-columns: 1fr; }
 }
 
