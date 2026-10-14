@@ -14,6 +14,7 @@ export default defineConfig({
         projects: path.resolve(__dirname, "projects.html"),
         directions: path.resolve(__dirname, "directions.html"),
         research: path.resolve(__dirname, "research.html"),
+        papers: path.resolve(__dirname, "papers.html"),
         people: path.resolve(__dirname, "people.html"),
         contact: path.resolve(__dirname, "contact.html"),
       },
